@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* azul claro */
+}
+
+header {
+    background-color: #005f99;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #a0e0ff;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+#home {
+    background-color: #e6f7ff;
+}
+
+#about, #projects, #contact {
+    background-color: #cceeff;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    margin-top: 1rem;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #005f99;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #005f99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #003f66;
+}
+
+#repos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.repo {
+    border: 1px solid #ddd;
+    margin: 1rem;
+    padding: 1rem;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.repo:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #005f99;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #a0e0ff;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    #contact-form {
+        width: 90%;
+    }
+}
+
+/* Animações */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
